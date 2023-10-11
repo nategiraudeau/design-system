@@ -26,12 +26,13 @@
     border: 2px solid var(--theme-background);
     transition: border-color var(--theme-transition-slow) var(--theme-easing-smooth),
         background-color var(--theme-transition-slow) var(--theme-easing-smooth),
-        left var(--theme-transition-slow) var(--theme-easing-smooth);
+        left var(--theme-transition-slow) var(--theme-easing-smooth),
+        transform var(--theme-transition-fast);
 }
 
-// .switch:hover {
-//     opacity: 0.6;
-// }
+.switch:hover::after {
+    transform: scale(1.25) translateX(2px);
+}
 
 .switch.switch--true {
     background: var(--theme-primary);
@@ -41,4 +42,8 @@
 .switch--true::after {
     left: calc(44px - 20px);
     background: var(--theme-switch-knob-true);
+}
+
+.switch--true:hover::after {
+    transform: scale(1.25) translateX(-2px);
 }
