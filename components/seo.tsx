@@ -8,7 +8,7 @@ export interface SeoProps {
 
 const Seo: React.FC<SeoProps> = ({ title, description, children }) => (
     <Head>
-        <title>{title ? `${title} | Nate's Email` : 'Nate\'s Email'}</title>
+        <title>{title ? `${title} | Design System` : 'Design System'}</title>
         <meta name="description" content={description} />
         {children}
     </Head>
